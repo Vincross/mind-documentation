@@ -1,4 +1,3 @@
 # HEXA Documentation
 
-stuff and things
-
+Welcome to the HEXA documentation.
