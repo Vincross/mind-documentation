@@ -21,6 +21,7 @@
     * [Forum](Introduction/forum.md)
     * [GitHub](Introduction/github.md)
     * [Social Media](Introduction/socialmedia.md)
+    * [Support](Introduction/support.md)
 
 ## Development
 
