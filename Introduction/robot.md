@@ -27,3 +27,9 @@ Third-party libraries and dependencies are stored in the `deps` folder. The incl
 
 You can find more information on how to do this in our [OpenCVSkill tutorial](/Development/opencv.md).
 
+# Building a Skill
+
+
+
+
+
