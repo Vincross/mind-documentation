@@ -2,7 +2,9 @@
 
 Say hi to HEXA.
 
-[https://www.youtube.com/watch?v=5OQrAyfnBBo](https://www.youtube.com/watch?v=5OQrAyfnBBo "Meet HEXA")
+```
+{% youtube src="https://www.youtube.com/watch?v=5OQrAyfnBBo" %}{% endyoutube %}
+```
 
 HEXA is a six-legged robot designed to handle all sorts of terrain. You can write programs \(called [Skills](/Introduction/hexaskills.md)\) to control HEXA and also control the robot by using your phone as a remote.
 
