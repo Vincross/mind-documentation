@@ -29,6 +29,12 @@ You can find more information on how to do this in our [OpenCVSkill tutorial](/D
 
 # Building a Skill
 
+To use the[ MIND SDK](/Introduction/mindsdk.md), you'll need to have it [installed](/Development/installmind.md) on your machine and import it into your golang file. 
+
+```go
+import "mind/core/framework"
+```
+
 To develop a Skill, implement the `skill.Base` interface:
 
 ```go
