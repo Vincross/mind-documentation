@@ -40,8 +40,6 @@ Each of HEXA's legs has a wide range of motion, which you can see defined in the
 
 ![](/assets/download %281%29.png)
 
-
-
 # Leg and Body Coordinates
 
 The legs and body are tracked using a Cartesian coordinate system based on the diagrams below.
@@ -51,6 +49,4 @@ The legs and body are tracked using a Cartesian coordinate system based on the d
 Additionally, the body-coordinates follow the direction of the camera, as opposed to the ground-coordinates. The ground-coordinates will not change when the camera rotates.
 
 ![](/assets/download %283%29.png)
-
-
 
