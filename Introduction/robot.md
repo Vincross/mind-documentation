@@ -15,7 +15,7 @@ myskill
         └── myskill.go
 ```
 
-The Robot part of a HEXA skills contains the code that is running _on_ the robot.
+The Robot part of a HEXA skill contains the code that is running _on_ the robot.
 
 We use the Go programming language to write code for HEXA, and we have a detailed [SDK reference](/APIReference/robotpart.md) to describe the different functions we provide.
 
