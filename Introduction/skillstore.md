@@ -24,8 +24,6 @@ Select 'Create a Skill.' Fill in your Skill's name, choose an icon, and enter th
 
 ![](/assets/Screen Shot 2017-08-14 at 4.13.56 PM.png)
 
-
-
 ## 3\) Copy the Skill ID into your Manifest
 
 When you create your skill, you should get a pop up containing your Skill ID. Be sure to note it down, you'll need it later.
@@ -43,6 +41,22 @@ Navigate to `manifest.json` in your Skill's package and enter it there. Make sur
  }
 }
 ```
+
+## 4\) Go to your Skill's detail page
+
+From the Skill section of the Developer Bridge, select 'Details' next to your desired Skill. That will bring up a detail page.
+
+![](/assets/Screen Shot 2017-08-14 at 4.47.38 PM.png)
+
+## 5\) Upload your Skill and fill in information
+
+Select 'Edit' to add a description, instructions, and release notes for your Skill. Most importantly, upload your `.mpk` package at the prompt.![](/assets/Screen Shot 2017-08-14 at 4.48.45 PM.png)
+
+## 6\) Submit for review
+
+Once you have filled out the necessary information, select 'Submit for Review.' This will send it to the Vincross team who will approve or reject your application. After approval, your Skill will be available in the [Skill Store](/Introduction/skillstore.md).
+
+![](/assets/Screen Shot 2017-08-14 at 4.49.22 PM.png)
 
 
 
