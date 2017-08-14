@@ -1,3 +1,4 @@
 # MIND Server
 
-Info on the MIND server
+The MIND Server contains services provided by Vincross. It helps enable communication between your mobile device and robot. 
+
