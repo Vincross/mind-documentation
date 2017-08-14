@@ -7,7 +7,7 @@ Once you've created a [Skill](/Introduction/hexaskills.md), you can upload it to
 * [How to upload your skills to our skill store](/Introduction/skillstore.md)
 * [How to chat with developers on our forum](/Introduction/forum.md)
 * [How to interact with us on social media](/Introduction/socialmedia.md)
-* How to get help and support if you're stuck
+* [How to get help and support if you're stuck](/Introduction/support.md)
 
 
 
