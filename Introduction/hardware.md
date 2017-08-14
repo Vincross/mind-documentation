@@ -18,9 +18,12 @@ Here are all the parts and pieces that come with your new HEXA:
 * Charging Dock
 * AC/DC Adapter
 
-# HEXA Inventory![](/assets/Screen Shot 2017-08-14 at 10.02.17 AM.png)Hardware Interfaces
+# HEXA Inventory
 
-If you remove HEXA's head shell, you can see the hardware interfaces more clearly:![](/assets/Screen Shot 2017-08-14 at 10.08.56 AM.png)
+![](/assets/Screen Shot 2017-08-14 at 10.02.17 AM.png)
 
+# Hardware Interfaces
 
+If you remove HEXA's head shell, you can see the hardware interfaces more clearly:
 
+![](/assets/Screen Shot 2017-08-14 at 10.08.56 AM.png)
