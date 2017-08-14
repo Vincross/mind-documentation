@@ -24,13 +24,3 @@ If you remove HEXA's head shell, you can see the hardware interfaces more clearl
 
 
 
-
-
-
-
-
-
-
-
-
-
