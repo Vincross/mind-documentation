@@ -1,6 +1,8 @@
 # What is HEXA?
 
-Hello, Human! Say hi to HEXA.![](/assets/Screen Shot 2017-08-14 at 10.10.48 AM.png)
+Hello, Human! Say hi to HEXA.
+
+![](/assets/Screen Shot 2017-08-14 at 10.10.48 AM.png)
 
 HEXA is a six-legged robot designed to handle all sorts of terrain. You can write programs \(called [Skills](/Introduction/hexaskills.md)\) to control HEXA and also control the robot by using your mobile device as a remote.
 
@@ -25,4 +27,3 @@ We provide a thriving community of robot developers to help you build, test, and
 The skill store functions like an "app store" for robot skills and here you can share your functions and try out skills that others have developed.
 
 Ready to learn more about HEXA? Read on. We'll go over things in stages.
-
