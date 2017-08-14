@@ -68,3 +68,5 @@ We can break this down line-by-line:
 
 While this is a very simple example, you can see the basic functions and skeleton needed to build a Skill on the Robot side. You'll learn more about building a skill in our [Your First Skill](/Development/yourfirstskill.md) tutorial.
 
+You can find more information for the Robot SDK functions in our [Developer Reference](/APIReference/robotpart.md) \(drivers, sending data, storage, and more\).
+
