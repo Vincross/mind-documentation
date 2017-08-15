@@ -4,7 +4,7 @@ We'd love to see your adventures with HEXA. Who knows? We might give you a shout
 
 * [Facebook](https://www.facebook.com/VincrossRobotics)
 * [Twitter](https://twitter.com/vincrosshexa)
-* Youtube
+* [Youtube](https://www.youtube.com/channel/UCI-WLrvKu99o2tMXJiy9b1w)
 
 
 
