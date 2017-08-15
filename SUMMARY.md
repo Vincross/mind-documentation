@@ -62,6 +62,3 @@
     * [infrared](APIReference/infrared.md)
     * [media](APIReference/media.md)
 * [Remote Part](APIReference/remotepart.md)
-
-
-
