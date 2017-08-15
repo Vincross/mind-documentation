@@ -9,11 +9,11 @@ Here are all the parts and pieces that come with your new HEXA:
   * Camera
   * Hardware interfaces
     * USB
-    * Audio in/out \(3.5mm\)
+    * Audio line in/out \(3.5mm\)
     * I²C
     * ADC
-    * GPIo
-    * 5V/3.3V power output
+    * GPIO
+    * 5V/3.3V power output
   * Signal light
 * Charging Dock
 * AC/DC Adapter
