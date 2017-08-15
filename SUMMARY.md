@@ -38,13 +38,6 @@
 * [Extending the SDK](Development/extendingsdk.md)
   * [OpenCV](Development/opencv.md)
 * [Example Skills](Development/exampleskills.md)
-  * [SensorWalkSkill](Development/sensorwalkskill.md)
-  * [MoveLegsSkill](Development/movelegsskill.md)
-  * [BalanceSkill](Development/balanceskill.md)
-  * [SightSkill](Development/sightskill.md)
-  * [PeripheralsSkill](Development/peripheralsskill.md)
-  * [OpenCVSkill](Development/opencvskill.md)
-  * [ROSSkill](Development/rosskill.md)
 
 ## API Reference
 
