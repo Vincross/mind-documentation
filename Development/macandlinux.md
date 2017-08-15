@@ -67,7 +67,9 @@ When it's finished, you'll need to configure `mind` to use your [Developer Bridg
 $ mind login <youremail> <yourpassword>
 ```
 
-## 
+## Your First Skill
+
+After you've initialized the `mind` CLI, you can start creating [your first Skill](/Development/yourfirstskill.md).
 
 
 
