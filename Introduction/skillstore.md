@@ -2,7 +2,7 @@
 
 The Skill Store is where HEXA developers can share their Skills. Even if you're not a developer, you can test and try out new applications for your HEXA here. We built the Skill Store to be similar to an "app store" in the sense that you can browse and install other applications that people have created, allowing you to expand HEXA's capabilities without having to write a single line of code.
 
-Download the [Skill Store app](https://www.vincross.com/skill-store) that matches your device so you can find new skills and add your own.
+Download the [HEXA app](https://www.vincross.com/download-hexa-app) that matches your device so you can find new skills and add your own.
 
 # How to add your Skill to the Store
 
