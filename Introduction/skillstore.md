@@ -56,7 +56,7 @@ Select 'Edit' to add a description, instructions, and release notes for your Ski
 
 ## 6\) Submit for review
 
-Once you have filled out the necessary information, select 'Submit for Review.' This will send it to the Vincross team who will approve or reject your application. After approval, your Skill will be available in the [Skill Store](https://www.vincross.com/skill-store).
+Once you have filled out the necessary information, select 'Submit for Review.' This will send it to the Vincross team who will approve or reject your application. After approval, your Skill will be available in the Skill Store.
 
 ![](/assets/Screen Shot 2017-08-14 at 4.49.22 PM.png)
 
