@@ -2,7 +2,7 @@
 
 You can find our example skills on [GitHub](/Introduction/github.md), and each of them are described here.
 
-* [SensorWalkSkill](/Development/sensorwalktutorial.md)
+* [SensorWalkSkill](/Development/sensorwalkskill.md)
 * [MoveLegsSkill](/Development/movelegsskill.md)
 * [BalanceSkill](/Development/balanceskill.md)
 * [SightSkill](/Development/sightskill.md)
