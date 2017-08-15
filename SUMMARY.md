@@ -37,7 +37,6 @@
   * [SensorWalkSkill](Development/sensorwalktutorial.md)
 * [Extending the SDK](Development/extendingsdk.md)
   * [OpenCV](Development/opencv.md)
-  * [Using the HEXA Simulator](Development/hexasim.md)
 * [Example Skills](Development/exampleskills.md)
   * [SensorWalkSkill](Development/sensorwalkskill.md)
   * [MoveLegsSkill](Development/movelegsskill.md)
@@ -63,3 +62,6 @@
     * [infrared](APIReference/infrared.md)
     * [media](APIReference/media.md)
 * [Remote Part](APIReference/remotepart.md)
+
+
+
