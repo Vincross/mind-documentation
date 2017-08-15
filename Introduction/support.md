@@ -1,10 +1,11 @@
-# Support![](/assets/Screen Shot 2017-08-14 at 5.11.40 PM.png)
+# Support
+![](/assets/Screen Shot 2017-08-14 at 5.11.40 PM.png)
 
 Our support team is here to help. We will always pay close attention to any problems you may encounter while using HEXA. 
 
 Please check the after-sale service policies and repair service policies at the Vincross official website:
 
-[https://www.vincross.com/support/after-sale-service-policies](https://www.vincross.com/support/service-policies/)
+[https://www.vincross.com/support/service-policies/](https://www.vincross.com/support/service-policies/)
 
 Be sure to download our [user manual](https://www.vincross.com/support/hexa-user-guide) for your records.
 
