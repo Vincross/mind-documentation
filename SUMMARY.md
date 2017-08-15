@@ -48,6 +48,7 @@
   * [Drivers](APIReference/drivers.md)
     * [accelerometer](APIReference/accelerometer.md)
     * [adc](APIReference/adc.md)
+    * [audio](APIReference/audio.md)
     * [distance](APIReference/distance.md)
     * [gpio](APIReference/gpio.md)
     * [hexabody](APIReference/hexabody.md)
