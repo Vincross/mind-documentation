@@ -6,7 +6,7 @@ Download the [Skill Store app](https://www.vincross.com/skill-store) that matche
 
 # How to add your Skill to the Store
 
-To publish a Skill on the Store, you need to get a unique Skill ID provided by Vincross. To do this, you need to sign up for the [Developer Bridge](https://developer.vincross.com/bridge) and initialize your Skill there.
+To publish a Skill on the Store, you need to get a unique Skill ID provided by Vincross. To do this, you'll need to create a Vincross account. After that, you can log in to the [Developer Bridge](https://developer.vincross.com/bridge) and initialize your Skill there.
 
 Note: While it's okay to use any string as your Skill ID while testing, you'll need to use the official Skill ID in order to distribute your application.
 
