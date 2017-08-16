@@ -18,7 +18,7 @@ Here are some of the features that HEXA provides:
 
 You can find out more about HEXA's internals on our [Hardware](/Introduction/hardware.md) page.
 
-We believe in an open robot for everyone to use and develop on. That's why HEXA is open source. You can find more information on our [GitHub](/Introduction/github.md). Check out our [development section](/Development/yourfirstskill.md) to learn how to create your first skills on HEXA.
+We believe in an open robot for everyone to use and develop on. That's why the MIND SDK is open source. You can find more information on our [GitHub](/Introduction/github.md). Check out our [development section](/Development/yourfirstskill.md) to learn how to create your first skills on HEXA.
 
 HEXA runs on the [MIND OS](/Introduction/mindos.md), which is our Linux-based OS for robotics. This makes it easy for developers to customize HEXA.
 
