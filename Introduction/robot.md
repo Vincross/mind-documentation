@@ -29,7 +29,7 @@ You can find more information on how to do this in our [OpenCVSkill tutorial](/D
 
 # Building a Skill
 
-To use the[ MIND SDK](/Introduction/mindsdk.md), you'll need to have it [installed](/Development/installmind.md) on your machine and import it into your golang file. 
+To use the[ MIND SDK](/Introduction/mindsdk.md), you'll need to have it [installed](/Development/installmind.md) on your machine and import it into your golang file.
 
 ```go
 import "mind/core/framework"
@@ -70,7 +70,8 @@ We can break this down line-by-line:
 * Import the MIND SDK
 * We set up an Example struct so we have something to return. In this case, we're just using the built-in `skill.Base`
 * We build a function called `NewSkill()` that implements the `skill.Interface` interface
-  * This function returns the `Example` struct
+  * The SDK framework will call this `NewSkill()` function to get the interface to start the Skill.
+* * This function returns the `Example` struct
 
 While this is a very simple example, you can see the basic functions and skeleton needed to build a Skill on the Robot side. You'll learn more about building a skill in our [Your First Skill](/Development/yourfirstskill.md) tutorial.
 

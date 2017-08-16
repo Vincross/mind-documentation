@@ -12,7 +12,7 @@ Here are some of the features that HEXA provides:
 
 * 3 axis accelerometer to stay balanced
 
-* distance cameras to detect objects
+* distance sensor to detect objects
 
 * infrared sensor for night vision
 
@@ -27,3 +27,4 @@ We provide a thriving community of robot developers to help you build, test, and
 The skill store functions like an "app store" for robot skills and here you can share your functions and try out skills that others have developed.
 
 Ready to learn more about HEXA? Read on. We'll go over things in stages.
+
