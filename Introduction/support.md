@@ -1,7 +1,8 @@
 # Support
-![](/assets/Screen Shot 2017-08-14 at 5.11.40 PM.png)
 
-Our support team is here to help. We will always pay close attention to any problems you may encounter while using HEXA. 
+![](/assets/Screen Shot 2017-08-15 at 8.49.29 PM.png)
+
+Our support team is here to help. We will always pay close attention to any problems you may encounter while using HEXA.
 
 Please check the after-sale service policies and repair service policies at the Vincross official website:
 
