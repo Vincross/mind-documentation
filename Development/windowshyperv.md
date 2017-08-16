@@ -6,7 +6,7 @@ Got one? Good. Read on.
 
 # Install Docker Toolbox
 
-Vincross uses [Docker](https://www.docker.com/) in order to manage the SDK libraries and dependencies. Doing it this way means you don't have to install a bunch of things on your system, and you can update your environment with one command. If you don't have Docker installed, do so now. Follow these [installation instructions](https://docs.docker.com/toolbox/toolbox_install_windows/) if you need help.
+Vincross uses [Docker](https://www.docker.com/) in order to manage the SDK libraries and dependencies. Doing it this way means you don't have to install a bunch of things on your system, and you can update your environment with one command. If you don't have Docker installed, do so now. Follow these [installation instructions](https://docs.docker.com/engine/installation/) if you need help.
 
 After Docker is installed, open Docker -&gt; Settings from the taskbar and share the drive where you intend to do your Skill development.![](/assets/download %289%29.png)
 

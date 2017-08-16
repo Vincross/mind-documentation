@@ -2,7 +2,7 @@
 
 The Skill Store is where HEXA developers can share their Skills. Even if you're not a developer, you can test and try out new applications for your HEXA here. We built the Skill Store to be similar to an "app store" in the sense that you can browse and install other applications that people have created, allowing you to expand HEXA's capabilities without having to write a single line of code.
 
-Download the [Skill Store app](https://www.vincross.com/skill-store) that matches your device so you can find new skills and add your own.
+Download the [HEXA app](https://www.vincross.com/download-hexa-app) that matches your device so you can find new skills and add your own.
 
 # How to add your Skill to the Store
 
@@ -56,7 +56,7 @@ Select 'Edit' to add a description, instructions, and release notes for your Ski
 
 ## 6\) Submit for review
 
-Once you have filled out the necessary information, select 'Submit for Review.' This will send it to the Vincross team who will approve or reject your application. After approval, your Skill will be available in the [Skill Store](https://www.vincross.com/skill-store).
+Once you have filled out the necessary information, select 'Submit for Review.' This will send it to the Vincross team who will approve or reject your application. After approval, your Skill will be available in the Skill Store.
 
 ![](/assets/Screen Shot 2017-08-14 at 4.49.22 PM.png)
 

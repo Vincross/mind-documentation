@@ -1,12 +1,8 @@
 # Summary
 
-## Home
-
-* [Home Page](README.md)
-
 ## Introduction
 
-* [What is HEXA?](Introduction/whatishexa.md)
+* [What is HEXA?](whatishexa.md)
   * [Hardware Diagrams](Introduction/hardware.md)
 * [What can I do with HEXA?](Introduction/whatcanido.md)
   * [MIND OS](Introduction/mindos.md)

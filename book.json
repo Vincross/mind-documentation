@@ -1,3 +1,5 @@
 {
-    "plugins": ["youtube"]
+    "structure": {
+        "readme": "whatishexa.md"
+    }
 }
