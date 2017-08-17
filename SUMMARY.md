@@ -5,6 +5,7 @@
 * [What is HEXA?](whatishexa.md)
   * [Hardware Diagrams](Introduction/hardware.md)
 * [What can I do with HEXA?](Introduction/whatcanido.md)
+  * [MIND](Introduction/mind.md)
   * [HEXA Skills](Introduction/hexaskills.md)
     * [Robot](Introduction/robot.md)
     * [Remote](Introduction/remote.md)
