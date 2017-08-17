@@ -16,7 +16,7 @@ While we've gone through some simple examples so far, that's only the tip of the
 
 Our first advanced tutorial goes over how to use OpenCV with HEXA.
 
-## Tutorials
+## Advanced Tutorials
 
 * [Using OpenCV](/Development/opencv.md)
 
