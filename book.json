@@ -1,5 +1,7 @@
 {
-    "structure": {
+  "plugins": ["anchors"],
+  "structure": {
         "readme": "whatishexa.md"
     }
+
 }
