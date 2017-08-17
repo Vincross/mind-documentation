@@ -28,10 +28,9 @@
 * [Developer Bridge](Development/developerbridge.md)
 * [Your First Skill](Development/yourfirstskill.md)
   * [SensorWalkSkill](Development/sensorwalktutorial.md)
-* [Extending the SDK](Development/extendingsdk.md)
+* [Example Skills](Development/exampleskills.md)
   * [OpenCV](Development/opencv.md)
   * [Using the HEXA Simulator](Development/hexasim.md)
-* [Example Skills](Development/exampleskills.md)
 
 ## API Reference
 
