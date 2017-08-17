@@ -1,4 +1,4 @@
-# Your First Skill
+# Your First Skills
 
 Are you ready to build your first skill on HEXA? This first example shows how to use the `mind` CLI to build, package, and run a Skill on HEXA. Then we'll talk about how to make HEXA walk and use sensors in the [SensorWalkSkill tutorial](/Development/sensorwalktutorial.md).
 

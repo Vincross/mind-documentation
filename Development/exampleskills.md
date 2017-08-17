@@ -1,4 +1,4 @@
-# Example Skills
+# More Example Skills
 
 You can find our example skills on [GitHub](/Introduction/github.md), and each of them are described here.
 
