@@ -10,15 +10,5 @@ You can find our example skills on [GitHub](/Introduction/github.md), and each o
 * **OpenCVSkill - **OpenCVSkill is an example project showing how to cross-compile C++ libraries and bind them to Golang for Skill development. This Skill makes the HEXA stand up when it detects human faces.
 * **ROSSkill - **ROSSkill implements a Skill that shows how to publish images to an ROS topic via rosserial.
 
-# Extending the SDK
-
-While we've gone through some simple examples so far, that's only the tip of the iceberg on what HEXA can do. We'll be showing off advanced use cases here that bring in other packages or libraries to make something truly unique.
-
-Our first advanced tutorial goes over how to use OpenCV with HEXA.
-
-## Advanced Tutorials
-
-* [Using OpenCV](/Development/opencv.md)
-
 
 
