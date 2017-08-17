@@ -28,8 +28,8 @@
   * [SensorWalkSkill](Development/sensorwalktutorial.md)
   * [More Example Skills](Development/exampleskills.md)
   * [Extending the SDK](Development/extendingsdk.md)
-  * [OpenCV](Development/opencv.md)
-  * [Using the HEXA Simulator](Development/hexasim.md)
+    * [OpenCV](Development/opencv.md)
+    * [Using the HEXA Simulator](Development/hexasim.md)
 
 ## API Reference
 
