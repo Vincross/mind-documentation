@@ -2,6 +2,8 @@
 
 Are you ready to build your first skill on HEXA? This first example shows how to use the `mind` CLI to build, package, and run a Skill on HEXA. Then we'll talk about how to make HEXA walk and use sensors in the [SensorWalkSkill tutorial](/Development/sensorwalktutorial.md).
 
+Make sure you've [installed](/Development/installmind.md) the MIND SDK before continuing.
+
 ## Create a new project
 
 To start running Skills on our HEXA, we can use `mind init projectname` to build an example skeleton project. Let's do that now:
@@ -22,7 +24,7 @@ $ mind pack    # Will pack the Skill as an mpk file.
 
 ## Run
 
-Before we can run a Skill, we need to tell it what HEXA to run on. To see a list of available HEXAs on the network, we can run `mind scan`. 
+Before we can run a Skill, we need to tell it what HEXA to run on. To see a list of available HEXAs on the network, we can run `mind scan`.
 
 ```
 $ mind scan
