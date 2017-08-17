@@ -27,6 +27,7 @@
 * [Your First Skill](Development/yourfirstskill.md)
   * [SensorWalkSkill](Development/sensorwalktutorial.md)
   * [More Example Skills](Development/exampleskills.md)
+    * [MoveLegsSkill](Development/movelegsskill.md)
   * [Extending the SDK](Development/extendingsdk.md)
     * [OpenCV](Development/opencv.md)
     * [Using the HEXA Simulator](Development/hexasim.md)
