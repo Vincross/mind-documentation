@@ -1,11 +1,11 @@
 #! /bin/bash
 
-# First put mind in $GOPATH
-# then run npm install gitbook-cli
+# Run this script in mind-documentation folder to generate api reference part from latest released mind framework.
+# To use this script, you need to install [godocdown](https://github.com/robertkrimen/godocdown) first.
 
-DIRS=("mind/core/framework")
-GOPATHS=`echo $GOPATH | tr ':' '\n'`
+DIRS=("mind/core/framework") # code need to generate
 PREFIX='APIReference'
+
 TEMP_DIR="tmp"
 TEMP_PATH="tmp/tmp"
 TEMP_FILE="tmp.go"
@@ -41,68 +41,70 @@ gen_doc() {
     fi
 }
 
-# Find go path of MIND src
-go_path="tmp"
 
 # Generate document
 gen_all() {
-for DIR in $DIRS; do
-    # Remove INTERNAL code
-    rm -rf $TEMP_PATH/src/$DIR
-    mkdir -p $TEMP_PATH/src/$DIR
-    cp -r ${go_path}/src/$DIR/* $TEMP_PATH/src/$DIR
-    src_files=`find ${TEMP_PATH}/src/$DIR -type f`
-    for src_file in $src_files; do
-        if [[ ! -e $src_file ]]; then
-            echo "File gone: $src_file"
-            continue
-        fi
-        if [[ `cat $src_file | grep package -n1 | grep '//[ ]*INTERNAL' | wc -l | tr -d ' '` == "1" ]]; then
-            echo "Delete package: `dirname $src_file`"
-            rm -rf `dirname $src_file`
-        else
-            rm -f $TEMP_FILE
-            touch $TEMP_FILE
-            copy_flag=0
-            while IFS='' read -r line || [[ -n "$line" ]]; do
-                if [[ $line == "//INTERNAL" || $line == "// INTERNAL" ]]; then
-                    copy_flag=1
-                fi
-                if [[ $copy_flag == 0 ]]; then
-                    # echo "Write line: $line"
-                    echo "$line" >> $TEMP_FILE
-                else
-                    echo "Skip line: $line" >> skip.log
-                fi
-                if [[ $line == "}" || $line == "" ]]; then
-                    copy_flag=0
-                fi
-            done < $src_file
-            cp $TEMP_FILE $src_file
-        fi
-    done
+    for DIR in $DIRS; do
+        # Remove INTERNAL code
+        rm -rf $TEMP_PATH/src/$DIR
+        mkdir -p $TEMP_PATH/src/$DIR
+        cp -r ${TEMP_DIR}/src/$DIR/* $TEMP_PATH/src/$DIR
+        src_files=`find ${TEMP_PATH}/src/$DIR -type f`
+        for src_file in $src_files; do
+            if [[ ! -e $src_file ]]; then
+                echo "File gone: $src_file"
+                continue
+            fi
+            if [[ `cat $src_file | grep package -n1 | grep '//[ ]*INTERNAL' | wc -l | tr -d ' '` == "1" ]]; then
+                echo "Delete package: `dirname $src_file`"
+                rm -rf `dirname $src_file`
+            else
+                rm -f $TEMP_FILE
+                touch $TEMP_FILE
+                copy_flag=0
+                while IFS='' read -r line || [[ -n "$line" ]]; do
+                    if [[ $line == "//INTERNAL" || $line == "// INTERNAL" ]]; then
+                        copy_flag=1
+                    fi
+                    if [[ $copy_flag == 0 ]]; then
+                        # echo "Write line: $line"
+                        echo "$line" >> $TEMP_FILE
+                    else
+                        echo "Skip line: $line" >> skip.log
+                    fi
+                    if [[ $line == "}" || $line == "" ]]; then
+                        copy_flag=0
+                    fi
+                done < $src_file
+                cp $TEMP_FILE $src_file
+            fi
+        done
 
-    dirs=`find ${TEMP_PATH}/src/$DIR -type d`
-    for dir in $dirs; do
-        dir=${dir/${TEMP_PATH}\/src\//}
-        gen_doc $dir
+        dirs=`find ${TEMP_PATH}/src/$DIR -type d`
+        for dir in $dirs; do
+            dir=${dir/${TEMP_PATH}\/src\//}
+            gen_doc $dir
+        done
     done
-done
 }
 
+# Download latest mind framework
 mkdir -p $TEMP_DIR
 curl -o $TEMP_DIR/mind.tar.gz https://cdn-static.vincross.com/downloads/mind/latest/mind.tar.gz
 tar -C $TEMP_DIR -zxf $TEMP_DIR/mind.tar.gz
 
+# Remove old API Reference part
 sed -n '/## API Reference/q;p' SUMMARY.md > SUMMARY.md.tmp
 mv SUMMARY.md.tmp SUMMARY.md
 
+# Generate new API Reference part
 echo "## API Reference" >> SUMMARY.md
 echo "" >> SUMMARY.md
-echo "* [Robot Part](APIReference/robotpart.md)" >> SUMMARY.md
+echo "* [Robot Part]($PREFIX/robotpart.md)" >> SUMMARY.md
 gen_all
-echo "* [Remote Part](APIReference/remotepart.md)" >> SUMMARY.md
+echo "* [Remote Part]($PREFIX/remotepart.md)" >> SUMMARY.md
 
+# Remove temp files
 mv $PREFIX/mind/core/framework.md $PREFIX
 rm -r $PREFIX/mind
 rm $TEMP_FILE
