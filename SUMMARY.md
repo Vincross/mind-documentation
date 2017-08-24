@@ -31,6 +31,7 @@
 * [Extending the SDK](Development/extendingsdk.md)
   * [OpenCV](Development/opencv.md)
   * [Using the HEXA Simulator](Development/hexasim.md)
+* [DIY your HEXA](Development/diyyourhexa.md)
 
 ## API Reference
 
