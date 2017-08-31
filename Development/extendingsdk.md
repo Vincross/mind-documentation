@@ -7,6 +7,7 @@ Our first advanced tutorial goes over how to use OpenCV with HEXA.
 ## Tutorials
 
 * [Using OpenCV](/Development/opencv.md)
+* [Using the HEXA Simulator](/Development/hexasim.md)
 
 
 
