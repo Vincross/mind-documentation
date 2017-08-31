@@ -2,7 +2,7 @@
 
 The Developer Bridge is your "dashboard" where you can build and test HEXA skills.
 
-![](/assets/Screen Shot 2017-08-14 at 6.25.24 PM.png)
+ <img src="/assets/Screen Shot 2017-08-14 at 6.25.24 PM.png">
 
 Here's what the Developer Bridge looks like when you first log in. Any announcements will be displayed on the home page, and you will notice there are two sections: Skill and Test Skill.
 
@@ -30,13 +30,14 @@ How to use Test Skill:
 
 4. To update the Skill content, click "Edit Skill" button to upload a new package or edit the Skill description.
 
-5. If you want to stop sharing the test Skill, click the "Turn off" button, and the test link will no longer be accessable.
+5. If you want to stop sharing the test Skill, click the "Turn off" button, and the test link will no longer be accessible.
 
 # Profile
 
-To edit your Developer Profile, you need to navigate to your name in the top navigation bar, then select 'Account.'![](/assets/Screen Shot 2017-08-14 at 6.37.19 PM.png)
+To edit your Developer Profile, you need to navigate to your name in the top navigation bar, then select 'Account.'
+
+<img src="/assets/Screen Shot 2017-08-14 at 6.37.19 PM.png" align="center" width=450>
 
 Select 'Edit' to change your first name, last name, or website
 
 .![](/assets/Screen Shot 2017-08-14 at 6.37.40 PM.png)
-
