@@ -20,7 +20,7 @@ You can design new motions for the HEXA from within the Simulator. To do so, fir
 
 Once you've loaded your World, you can see the sandbox editor and 3D environment to test HEXA's motions. In order to create a new motion, select 'Menu' at the top left of your screen and then 'New Motion'.
 
-<img src="/assets/Screen Shot 2017-09-04 at 10.20.47 AM.png" align="center" width=200>
+<img src="/assets/Screen Shot 2017-09-04 at 10.20.47 AM.png" align="center" width=350>
 
 This will bring you to the motion design screen. Here you can control and modify each joint and leg of the HEXA, and play back the motions on screen to test them.
 
