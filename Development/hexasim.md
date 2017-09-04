@@ -30,7 +30,9 @@ Once you've created a new motion in the HEXA Simulator, you can export it for us
 
 In the Motion Designer, right-click the motion you are interested in, then select 'Export'. You can select a name and location for the file to be saved.
 
-SCREENSHOT
+<img src="/assets/Screen Shot 2017-09-04 at 11.41.55 AM.png" align="center" width=400>
+
+
 
 HEXA Motions are saved as `.vsm` files, and if you open it with a text editor this is what you'll see:
 
