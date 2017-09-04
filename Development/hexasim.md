@@ -28,4 +28,19 @@ This will bring you to the motion design screen. Here you can control and modify
 
 Once you've created a new motion in the HEXA Simulator, you can export it for use on your HEXA robot.
 
+In the Motion Designer, right-click the motion you are interested in, then select 'Export'. You can select a name and location for the file to be saved.
+
+SCREENSHOT
+
+HEXA Motions are saved as `.vsm` files, and if you open it with a text editor this is what you'll see:
+
+```
+Als-MacBook-Pro:Desktop alnelson$ less handclap.vsm
+V0A90V1A90V2A45V3A90V4A90V5A45V6A120V7A110V8A135V9A90V10A70V11A135V12A90V13A70V14A135V15A60V16A110V17A135V18A0T200|V0A60V1A70V2A45V3A120V4A70V5A45V6A120V7A110V8A135V9A90V10A70V11A135V12A90V13A70V14A135V15A60V16A110V17A135V18A0T200
+```
+
+It might look like a nonsense string of letters and numbers, but it follows a specific pattern to tell HEXA how to move. Here's how it works:
+
+
+
 See this post for details: [https://forum.vincross.com/t/about-hexa-simulator-api/170/4](https://forum.vincross.com/t/about-hexa-simulator-api/170/4)
