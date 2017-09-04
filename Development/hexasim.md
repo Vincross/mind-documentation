@@ -39,8 +39,6 @@ Als-MacBook-Pro:Desktop alnelson$ less handclap.vsm
 V0A90V1A90V2A45V3A90V4A90V5A45V6A120V7A110V8A135V9A90V10A70V11A135V12A90V13A70V14A135V15A60V16A110V17A135V18A0T200|V0A60V1A70V2A45V3A120V4A70V5A45V6A120V7A110V8A135V9A90V10A70V11A135V12A90V13A70V14A135V15A60V16A110V17A135V18A0T200
 ```
 
-It might look like a nonsense string of letters and numbers, but it follows a specific pattern to tell HEXA how to move. Here's how it works:
-
-
+It might look like a nonsense string of letters and numbers, but it follows a specific pattern to tell HEXA how to move.
 
 See this post for details: [https://forum.vincross.com/t/about-hexa-simulator-api/170/4](https://forum.vincross.com/t/about-hexa-simulator-api/170/4)
