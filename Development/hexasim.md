@@ -24,7 +24,17 @@ Once you've loaded your World, you can see the sandbox editor and 3D environment
 
 This will bring you to the motion design screen. Here you can control and modify each joint and leg of the HEXA, and play back the motions on screen to test them.
 
+![](/assets/Screen Shot 2017-09-04 at 3.05.34 PM.png)
 
+As you can see, you can select each leg and the head independently, and interactively change the angle of each joint with the sliders provided. A #D preview shows what that configuration looks like on the HEXA.
+
+## The Timeline
+
+Once you've gotten a few good positions worked out for HEXA, it's time to string them together into a fluid motion. The handclap example shown here is a simple one that consists of two frames: HEXA moving its legs apart and then together in a clapping motion.
+
+You can add more frames to create complex motions like dancing, then play it back in the simulator.
+
+![](/assets/Screen Shot 2017-09-04 at 3.05.46 PM.png)
 
 # How to Export Your Motions
 
