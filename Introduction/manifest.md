@@ -21,6 +21,7 @@ The manifest section of a HEXA Skill consists of a `manifest.json` file at the t
 * `skillID` -- this is a unique ID generated when creating a Skill in the [Developer Bridge](https://developer.vincross.com/developer/bridge).
 * `version` -- Specify the version of your Skill. We use `<major>.<minor>.<build>` syntax.
 * `remote.orientation` -- Specify the orientation of the remote application running on your mobile device. You can choose `"portrait"` or `"landscape"`, but it defaults to `"portrait"`.
+* `devicesPermission` -- (Available in MIND 0.5.3 and later) Specify a list of device files group name your skill need to access. Options: `"video", "dialout", "tty", "disk", "i2c", "netdev", "audio"`.
 
 Here's a `manifest.json` you can look at as an example:
 
@@ -32,7 +33,11 @@ Here's a `manifest.json` you can look at as an example:
  "version": "1.0.2",
  "remote": {
      "orientation": "portrait"
- }
+ },
+ "devicesPermission": [
+     "video",
+     "audio"
+ ]
 }
 ```
 

@@ -1,20 +1,51 @@
-# Skill
+# skill
+----
+    import "mind/core/framework/skill"
 
----
+Package skill provides an interface to be implemented by the robot part of a
+Skill.
 
-```go
-import "mind/core/framework/skill"
-```
+This function must be implemented in your skill package:
 
-The skill package provides an interface to be implemented by the robot part of a Skill.
-
-This function must be implemented in your Skill package:
-
-```go
-func NewSkill() skill.Interface
-```
+    func NewSkill() skill.Interface
 
 ## Usage
+
+#### func  OnClose
+
+```go
+func OnClose()
+```
+
+#### func  OnConnect
+
+```go
+func OnConnect()
+```
+
+#### func  OnDisconnect
+
+```go
+func OnDisconnect()
+```
+
+#### func  OnRecvJSON
+
+```go
+func OnRecvJSON(data []byte)
+```
+
+#### func  OnRecvString
+
+```go
+func OnRecvString(data string)
+```
+
+#### func  OnStart
+
+```go
+func OnStart()
+```
 
 #### type Base
 
@@ -24,54 +55,17 @@ type Base struct{}
 
 struct Base implements the base Skill interface
 
-#### func \(\*Base\) OnClose
-
-```go
-func (b *Base) OnClose()
-```
-
-#### func \(\*Base\) OnConnect
-
-```go
-func (b *Base) OnConnect()
-```
-
-#### func \(\*Base\) OnDisconnect
-
-```go
-func (b *Base) OnDisconnect()
-```
-
-#### func \(\*Base\) OnRecvJSON
-
-```go
-func (b *Base) OnRecvJSON(data []byte)
-```
-
-#### func \(\*Base\) OnRecvString
-
-```go
-func (b *Base) OnRecvString(data string)
-```
-
-#### func \(\*Base\) OnStart
-
-```go
-func (b *Base) OnStart()
-```
-
 #### type Interface
 
 ```go
 type Interface interface {
-    OnStart()            // Called when Skill is started.
-    OnConnect()          // OnConnect is called when robot has connected to remote.
-    OnClose()            // OnClose is called when Skill is closed. You have 1 second to do clean up before Skill is force terminated.
-    OnRecvJSON([]byte)   // OnRecvJSON is called when remote send JSON data to robot. Use json.Unmarshal to parse.
-    OnRecvString(string) // OnRecvString will be called when remote send string data ro robot.
-    OnDisconnect()       // OnDisconnect is called when remote disconnected from robot.
+	OnStart()            // Called when Skill is started.
+	OnConnect()          // OnConnect is called when robot has connected to remote.
+	OnClose()            // OnClose is called when Skill is closed. You have 1 second to do clean up before Skill is force terminated.
+	OnRecvJSON([]byte)   // OnRecvJSON is called when remote send JSON data to robot. Use json.Unmarshal to parse.
+	OnRecvString(string) // OnRecvString will be called when remote send string data ro robot.
+	OnDisconnect()       // OnDisconnect is called when remote disconnected from robot.
 }
 ```
 
-This interface must be implemented in every skill.
-
+Interface must be implemented in every skill.

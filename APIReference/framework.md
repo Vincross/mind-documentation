@@ -1,28 +1,21 @@
 # framework
+----
+    import "mind/core/framework"
 
----
-
-```go
-import "mind/core/framework"
-```
-
-The MIND framework provides an API that enables the robot to send messages to the remote.
+Package framework provides an API the enables robot to send messages to remote
 
 ## Usage
 
-#### func SendJSON
+#### func  SendJSON
 
 ```go
 func SendJSON(data json.RawMessage)
 ```
+SendJSON sends message with type json.RawMessage to remote.
 
-SendJSON sends message with type `json.RawMessage` to the remote.
-
-#### func SendString
+#### func  SendString
 
 ```go
 func SendString(str string)
 ```
-
-SendString sends message with type `string` to the remote.
-
+SendString sends message with type string to remote.
