@@ -70,6 +70,7 @@ gen_all() {
                         # echo "Write line: $line"
                         echo "$line" >> $TEMP_FILE
                     else
+                        echo "" >> $TEMP_FILE
                         echo "Skip line: $line" >> skip.log
                     fi
                     if [[ $line == "}" || $line == "" ]]; then
