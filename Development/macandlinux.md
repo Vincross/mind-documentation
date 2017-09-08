@@ -12,16 +12,16 @@ Vincross uses [Docker](https://www.docker.com/) in order to manage the SDK libra
 
 The MIND command-line interface is where you can update your environment, initialize skills, build your packages, connect to your HEXA, and more. To install `mind`, you'll first need to download it from our CDN and make it executable.
 
-```bash
+```text
 $ sudo curl -o /usr/local/bin/mind https://cdn-static.vincross.com/downloads/mind/latest/mind-`uname -s`-`uname -m`
 $ sudo chmod +x /usr/local/bin/mind
 ```
 
 Now that it's installed, you should be able to run `mind` at your Terminal. Try that now.
 
-```bash
+```text
 $ mind
-MIND Command-line Interface v0.5.2
+MIND Command-line Interface v0.5.3
 
 Usage:
   mind [command]
