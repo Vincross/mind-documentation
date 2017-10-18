@@ -1,4 +1,4 @@
-# Windows
+# Older Windows
 
 First things first: you'll need a [HEXA](https://www.vincross.com/hexa).
 
@@ -7,6 +7,8 @@ Got one? Good. Read on.
 # Install Docker Toolbox
 
 Vincross uses [Docker](https://www.docker.com/) in order to manage the SDK libraries and dependencies. Doing it this way means you don't have to install a bunch of things on your system, and you can update your environment with one command. If you don't have Docker installed, do so now. Follow these [installation instructions](https://docs.docker.com/toolbox/toolbox_install_windows/) if you need help.
+
+If your Windows is 64bit Windows 10 Pro, Enterprise or Education (1511 November update, Build 10586 or later), use [64bit Windows 10 version](/Development/windowshyperv.md) is recommended. See [requirements](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) for details.
 
 # MIND Command-line Interface
 

@@ -1,4 +1,4 @@
-# Windows and Hyper-V
+# 64bit Windows 10
 
 First things first: you'll need a [HEXA](https://www.vincross.com/hexa).
 
@@ -6,7 +6,9 @@ Got one? Good. Read on.
 
 # Install Docker
 
-Vincross uses [Docker](https://www.docker.com/) in order to manage the SDK libraries and dependencies. Doing it this way means you don't have to install a bunch of things on your system, and you can update your environment with one command. If you don't have Docker installed, do so now. Follow these [installation instructions](https://docs.docker.com/engine/installation/) if you need help.
+Vincross uses [Docker](https://www.docker.com/) in order to manage the SDK libraries and dependencies. Doing it this way means you don't have to install a bunch of things on your system, and you can update your environment with one command. If you don't have Docker installed, do so now. Follow these [docker installation instructions](https://docs.docker.com/engine/installation/) if you need help.
+
+If your Windows is not 64bit Windows 10 Pro, Enterprise or Education (1511 November update, Build 10586 or later), use [Docker toolbox version](/Development/windows.md). See [requirements](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) for details.
 
 After Docker is installed, open Docker -&gt; Settings from the taskbar and share the drive where you intend to do your Skill development.![](/assets/download %289%29.png)
 

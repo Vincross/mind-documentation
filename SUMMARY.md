@@ -21,8 +21,8 @@
 
 * [Install the MIND SDK](Development/installmind.md)
   * [macOS and Linux](Development/macandlinux.md)
-  * [Windows](Development/windows.md)
-  * [Windows and Hyper-V](Development/windowshyperv.md)
+  * [64bit Windows 10](Development/windowshyperv.md)
+  * [Older Windows](Development/windows.md)
 * [Developer Bridge](Development/developerbridge.md)
 * [Your First Skill](Development/yourfirstskill.md)
   * [SensorWalkSkill](Development/sensorwalktutorial.md)
