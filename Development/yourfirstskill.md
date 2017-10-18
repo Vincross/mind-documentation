@@ -45,6 +45,8 @@ $ mind run
 
 If you're just testing or on a friend's HEXA, you probably don't need to set the default robot. But if you're going to be developing a lot on the same robot, it can save a lot of time if you set the default.
 
+If you can not find any robot while execute `mind scan`, this might be because multicast is blocked or unstable in your WLAN, try `mind run --ip` directly instead, like `mind run --ip 10.0.0.51`. You can find ip address of HEXA in HEXA APP.
+
 Once you execute `mind run`, your Skill \(which currently does nothing\) should be running on your HEXA and displaying its status in your terminal.
 
 Ready to get HEXA walking? Check out our [SensorWalkSkill tutorial](/Development/sensorwalkskill.md) next.
