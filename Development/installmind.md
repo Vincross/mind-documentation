@@ -7,8 +7,5 @@ Depending on your platform, we have installation instructions on setting up the 
 Choose your platform below:
 
 * [macOS and Linux](/Development/macandlinux.md)
-* [Windows](/Development/windows.md)
-* [Windows with Hyper-V](/Development/windowshyperv.md)
-
-
-
+* [64bit Windows 10](/Development/windowshyperv.md)
+* [Older Windows](/Development/windows.md)
