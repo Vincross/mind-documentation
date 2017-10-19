@@ -15,7 +15,7 @@ $ cd helloworld
 
 ## Build and package
 
-Well, our Skill doesn't really do anything right now. But that's okay. We should probably test that we can build and package it correctly, and get it sent to our HEXA robot. We'll go into how to make a walking skill in this [tutorial](/Development/yourfirstskill.md).
+Well, our Skill doesn't really do anything right now. But that's okay. We should probably test that we can build and package it correctly, and get it sent to our HEXA robot. We'll go into how to make a walking skill in this [tutorial](/Development/sensorwalktutorial.md).
 
 ```
 $ mind build   # Will build an ARM binary into robot/skill
