@@ -20,7 +20,7 @@ Compiling for another architecture than what your development machine is using i
 
 We will be using `mind x [COMMAND]`to launch a container in the current folder which in turn will invoke `[COMMAND]`. In our case, we are going to write a small shell script`build.sh`which we will execute inside the cross-compiling container with`mind x ./build.sh`
 
-Inside the `opencv-2.4.13.2` folder that we just extracted, use your favorite editor and add the following content to `build.sh`.
+Inside the `opencv-2.4.13.2` folder that we just extracted, use your favorite editor and add the following content to `build.sh`, and run `chmod +x build.sh` to add executing permission to it.
 
 _This shell script contains all the commands that are required to build OpenCV directly grabbed from their _[_official documentation_](http://docs.opencv.org/2.4/doc/tutorials/introduction/crosscompilation/arm_crosscompile_with_cmake.html)_._
 
@@ -37,6 +37,7 @@ apt-get install -y \
     libtiff-dev \
     libjasper-dev \
     libdc1394-22-dev
+mkdir -p platforms/linux/build_hardfp
 cd platforms/linux/build_hardfp && \
     cmake -DCMAKE_TOOLCHAIN_FILE=../arm-gnueabi.toolchain.cmake ../../.. && \
     make && make install
@@ -67,8 +68,23 @@ $ tree .
 Note the`deps`folder. This is where you put all of the dynamic libraries that your Skill depends on. That means we need to copy the built OpenCV libraries and header files into this folder.
 
 ```
-$ cp -r ../opencv-2.4.13.2/install/* robot/deps/
+$ cp -r ../opencv-2.4.13.2/platforms/linux/build_hardfp/install/* robot/deps/
+```
 
+Then `robot/deps` should contains `include` and `lib` folder.
+
+```
+$ tree -L 2 robot/deps/
+robot/deps/
+├── include
+│   ├── opencv
+│   └── opencv2
+└── lib
+    ├── libopencv_calib3d.so -> libopencv_calib3d.so.2.4
+    ├── libopencv_calib3d.so.2.4 -> libopencv_calib3d.so.2.4.13
+    ├── libopencv_calib3d.so.2.4.13
+    ├── libopencv_contrib.so -> libopencv_contrib.so.2.4
+    ├── libopencv_contrib.so.2.4 -> libopencv_contrib.so.2.4.13
 ```
 
 To generate Golang bindings for C libraries, one would typically use CGO, and when binding for C++ libraries, one would use SWIG. Writing the Golang bindings can be a pretty mundane process, and in our case we are lucky. Some cool people have already gone through the effort of writing [Golang bindings for OpenCV using SWIG.](https://github.com/lazywei/go-opencv)
