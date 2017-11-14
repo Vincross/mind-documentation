@@ -9,7 +9,8 @@ DOF(degree of freedom) is 19.
 
 When animating a movement, duration (ms) will be passed as an argument when the
 distance to the new location is known, otherwise speed (cm/s for movements and
-degree/s for rotations) will passed.
+degree/s for rotations) will passed. The range of duration is 0 ~ 9999ms. The
+duration longer than 9999ms will be set as 9999ms.
 
 All joint and leg positions are points in a Cartesian coordinate system.
 
@@ -25,6 +26,8 @@ var (
 	JointNumberNotSupport   error = errors.New("The joint number is not support")
 	WrongGaitType           error = errors.New("Wrong gait type.")
 	OverflowStepLengthRatio error = errors.New("The step length ratio should be (0, 1].")
+	LegPositionInvalid      error = errors.New("The leg postion is invalid.")
+	SelectGaitWhileWalking  error = errors.New("Cound not select gait while the hexa is walking.")
 )
 ```
 
@@ -48,12 +51,29 @@ var JointDegreeRanges = []JointDegreeRange{
 JointDegreeRanges defines the range of rotation in degrees for each joint in
 every leg, starting with the joint closest to the HEXA's body.
 
+```go
+var LegLength = []float64{59, 47, 88}
+```
+LegLength is the length of each leg.
+
+```go
+var WorkspaceRadius = CalculateDistance(LegLength...)
+```
+WorkspaceRadius is the farthest point from the thigh root that hexa can reach.
+
 #### func  Available
 
 ```go
 func Available() bool
 ```
 Available returns whether driver is available or not.
+
+#### func  CalculateJointDegrees
+
+```go
+func CalculateJointDegrees() error
+```
+CalculateJointDegrees calculates joints degree in single leg.
 
 #### func  Close
 
@@ -62,12 +82,33 @@ func Close() (err error)
 ```
 Close shuts down the hexabody driver.
 
+#### func  Coordinates
+
+```go
+func Coordinates() (x, y, z float64, err error)
+```
+Coordinates returns the legPosition's coordinates.
+
 #### func  Direction
 
 ```go
 func Direction() (currDir float64)
 ```
 Direction returns the current direction in degrees (0-359).
+
+#### func  Fit
+
+```go
+func Fit() error
+```
+Fit is used to approximate a reachable leg position for the LegPosition object.
+
+#### func  IsValid
+
+```go
+func IsValid() bool
+```
+IsValid returns whether joint degree is in range.
 
 #### func  Lift
 
@@ -80,8 +121,7 @@ func Lift(lift float64) (err error)
 ```go
 func MoveHead(degree float64, duration int) (err error)
 ```
-MoveHead moves the head to specified degree(0-359) in given
-duration(0ms-9999ms).
+MoveHead moves the head to specified degree(0-359) in given duration.
 
 0 degrees is in the direction of the power button. An increase in direction
 angle results in an anti-clockwise rotation.
@@ -283,8 +323,8 @@ StopWalkingContinuously stops the HEXA from walking continuously.
 func Walk(direction float64, duration int) error
 ```
 Walk makes the HEXA walk one frame in given direction in degrees (0-359) with
-given duration(0ms-9999ms). Calling this function in a loop would give the same
-effect as calling WalkContinuously.
+given duration. Calling this function in a loop would give the same effect as
+calling WalkContinuously.
 
 0 degrees is in the direction of the power button. An increase in direction
 angle results in an anti-clockwise rotation.
@@ -354,6 +394,7 @@ const (
 	GaitWave                     // 5+1 gait, 5 legs stay on the ground and 1 leg raise at the same time
 	GaitRipple                   // 4+2 gait, 4 legs stay on the ground and 2 legs raise at the same time
 	GaitTripod                   // 3+3 gait, 3 legs stay on the ground and 3 legs raise at the same time
+	GaitAmble                    // 4+2 gait, 4 legs stay on the ground and 2 legs raise at the same time, different from GaitRipple.
 )
 ```
 
@@ -367,6 +408,14 @@ type JointDegree struct {
 ```
 
 JointDegree defines the degree and range of rotation of a joint.
+
+#### func  Fit
+
+```go
+func Fit() *JointDegree
+```
+Fit ensures the joint in range, if it is out of range, it will be modified to
+the adjacent edge value.
 
 #### type JointDegreeRange
 
@@ -386,6 +435,14 @@ type JointDegrees []JointDegree
 ```
 
 JointDegrees is a slice of JointDegree
+
+#### func  Fit
+
+```go
+func Fit() JointDegrees
+```
+Fit ensures the joints in range, if any of them is out of range, it will be
+modified to the adjacent edge value.
 
 #### func  NewJointDegrees
 

@@ -47,6 +47,13 @@ func OnRecvString(data string)
 func OnStart()
 ```
 
+#### func  SkillDataPath
+
+```go
+func SkillDataPath() (string, error)
+```
+Get skill's data path on robot.
+
 #### type Base
 
 ```go
@@ -69,3 +76,27 @@ type Interface interface {
 ```
 
 Interface must be implemented in every skill.
+
+#### type Robotinfo
+
+```go
+type Robotinfo struct {
+	Battery     float32 `json:"battery"`     // Battery is during 0~1 and 1 means the battery is full of power.
+	Temperature float32 `json:"temperature"` // The unit of temperature is centigrade.
+	DiskSpace   uint64  `json:"disk_space"`  // The unit of diskspace is byte(B).
+	IsCharging  bool    `json:"is_charging"`
+	SN          string  `json:"sn"`
+	Nickname    string  `json:"nickname"`
+	Owner       string  `json:"owner"`
+	Version     string  `json:"version"`
+}
+```
+
+Robotinfo is the information of robot.
+
+#### func  RobotInfo
+
+```go
+func RobotInfo() (Robotinfo, error)
+```
+Function RobotInfo is used to get the robot's information.
