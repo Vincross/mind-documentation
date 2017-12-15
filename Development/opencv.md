@@ -9,7 +9,7 @@ In this tutorial we are going to show how to cross compile and bind a C++ librar
 Let’s start by downloading and extracting OpenCV:
 
 ```
-$ wget https://github.com/opencv/opencv/archive/2.4.13.2.tar.gz
+$ curl -OL https://github.com/opencv/opencv/archive/2.4.13.2.tar.gz
 $ tar -xzvf 2.4.13.2.tar.gz
 $ cd opencv-2.4.13.2
 ```
