@@ -74,7 +74,7 @@ robot.stopSkill({
 })
 ```
 
-`onRecvSkillData`- Callback function for receiving JSON data from the robot.
+`onRecvSkillData`- Callback function for receiving JSON or string data from the robot.
 
 ```js
 robot.onRecvSkillData(function(skillID, data) { 
