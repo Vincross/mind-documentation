@@ -248,6 +248,7 @@ func Spin(degree float64, duration int) (err error)
 ```
 Spin makes the HEXA use its legs to position itself in the given degree of
 rotation in given duration.
+The range of degree is -30~30.
 
 #### func  Stand
 
