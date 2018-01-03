@@ -355,6 +355,10 @@ Example: Move head and walk at the same time with goroutine.
     select {}
     hexabody.Close()
 
+BUG(walk): Calling Walk will make function Lift and SelectGait stops working unless
+restarting the robot. It will be fixed in next version. Currently use
+WalkContinuously instead if needed.
+
 #### func  WalkContinuously
 
 ```go
