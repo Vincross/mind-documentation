@@ -68,13 +68,6 @@ func Available() bool
 ```
 Available returns whether driver is available or not.
 
-#### func  CalculateJointDegrees
-
-```go
-func CalculateJointDegrees() error
-```
-CalculateJointDegrees calculates joints degree in single leg.
-
 #### func  Close
 
 ```go
@@ -82,33 +75,12 @@ func Close() (err error)
 ```
 Close shuts down the hexabody driver.
 
-#### func  Coordinates
-
-```go
-func Coordinates() (x, y, z float64, err error)
-```
-Coordinates returns the legPosition's coordinates.
-
 #### func  Direction
 
 ```go
 func Direction() (currDir float64)
 ```
 Direction returns the current direction in degrees (0-359).
-
-#### func  Fit
-
-```go
-func Fit() error
-```
-Fit is used to approximate a reachable leg position for the LegPosition object.
-
-#### func  IsValid
-
-```go
-func IsValid() bool
-```
-IsValid returns whether joint degree is in range.
 
 #### func  Lift
 
@@ -212,27 +184,6 @@ func SelectGait(gaitType GaitType) error
 ```
 SelectGait chooses the walking gait of HEXA.
 
-#### func  SetDegree
-
-```go
-func SetDegree(jointNumber int, degree float64) error
-```
-SetJointDegree sets the degree of the particular joint.
-
-#### func  SetDegrees
-
-```go
-func SetDegrees(degree0, degree1, degree2 float64)
-```
-SetJointDegrees sets the degrees of three joints.
-
-#### func  SetLegPosition
-
-```go
-func SetLegPosition(legNumber int, legPostion *LegPosition) error
-```
-SetLegPosition set legPosition with legNumber.
-
 #### func  SetStepLength
 
 ```go
@@ -248,7 +199,6 @@ func Spin(degree float64, duration int) (err error)
 ```
 Spin makes the HEXA use its legs to position itself in the given degree of
 rotation in given duration.
-The range of degree is -30~30.
 
 #### func  Stand
 
@@ -356,10 +306,6 @@ Example: Move head and walk at the same time with goroutine.
     select {}
     hexabody.Close()
 
-BUG(walk): Calling Walk will make function Lift and SelectGait stops working unless
-restarting the robot. It will be fixed in next version. Currently use
-WalkContinuously instead if needed.
-
 #### func  WalkContinuously
 
 ```go
@@ -414,13 +360,20 @@ type JointDegree struct {
 
 JointDegree defines the degree and range of rotation of a joint.
 
-#### func  Fit
+#### func (*JointDegree) Fit
 
 ```go
-func Fit() *JointDegree
+func (j *JointDegree) Fit() *JointDegree
 ```
 Fit ensures the joint in range, if it is out of range, it will be modified to
 the adjacent edge value.
+
+#### func (*JointDegree) IsValid
+
+```go
+func (j *JointDegree) IsValid() bool
+```
+IsValid returns whether joint degree is in range.
 
 #### type JointDegreeRange
 
@@ -441,20 +394,41 @@ type JointDegrees []JointDegree
 
 JointDegrees is a slice of JointDegree
 
-#### func  Fit
-
-```go
-func Fit() JointDegrees
-```
-Fit ensures the joints in range, if any of them is out of range, it will be
-modified to the adjacent edge value.
-
 #### func  NewJointDegrees
 
 ```go
 func NewJointDegrees() JointDegrees
 ```
 NewJointDegrees creates a new JointDegrees.
+
+#### func (JointDegrees) Fit
+
+```go
+func (j JointDegrees) Fit() JointDegrees
+```
+Fit ensures the joints in range, if any of them is out of range, it will be
+modified to the adjacent edge value.
+
+#### func (JointDegrees) IsValid
+
+```go
+func (j JointDegrees) IsValid() bool
+```
+IsValid returns whether joints degrees are in range.
+
+#### func (JointDegrees) SetDegree
+
+```go
+func (j JointDegrees) SetDegree(jointNumber int, degree float64) error
+```
+SetJointDegree sets the degree of the particular joint.
+
+#### func (JointDegrees) SetDegrees
+
+```go
+func (j JointDegrees) SetDegrees(degree0, degree1, degree2 float64)
+```
+SetJointDegrees sets the degrees of three joints.
 
 #### type LegPosition
 
@@ -482,17 +456,45 @@ NewLegPosition returns new LegPosition with given (x, y, z). The coordinate is
 the Leg-coordinate. The x range is -168mm-168mm, y range is 0mm-194mm, z range
 is -135mm-135mm.
 
-#### func  SetCoordinates
+#### func (*LegPosition) CalculateJointDegrees
 
 ```go
-func SetCoordinates(x, y, z float64) *LegPosition
+func (legPosition *LegPosition) CalculateJointDegrees() error
+```
+CalculateJointDegrees calculates joints degree in single leg.
+
+#### func (*LegPosition) Coordinates
+
+```go
+func (legPosition *LegPosition) Coordinates() (x, y, z float64, err error)
+```
+Coordinates returns the legPosition's coordinates.
+
+#### func (*LegPosition) Fit
+
+```go
+func (legPosition *LegPosition) Fit() error
+```
+Fit is used to approximate a reachable leg position for the LegPosition object.
+
+#### func (*LegPosition) IsValid
+
+```go
+func (legPosition *LegPosition) IsValid() bool
+```
+IsValid returns if the leg positions can be reached.
+
+#### func (*LegPosition) SetCoordinates
+
+```go
+func (a *LegPosition) SetCoordinates(x, y, z float64) *LegPosition
 ```
 SetCoordinates sets the position coordinates of a LegPosition.
 
-#### func  SetJointDegrees
+#### func (*LegPosition) SetJointDegrees
 
 ```go
-func SetJointDegrees(jointDegrees JointDegrees) *LegPosition
+func (a *LegPosition) SetJointDegrees(jointDegrees JointDegrees) *LegPosition
 ```
 SetJointDegrees sets the jointdegrees of a LegPosition.
 
@@ -519,6 +521,28 @@ func PitchRoll(pitchAngle, rollAngle float64) LegPositions
 ```
 PitchRoll returns LegPositions transformed from given pitchAngle and rollAngle
 degrees.
+
+#### func (LegPositions) Fit
+
+```go
+func (a LegPositions) Fit() error
+```
+Fit is used to approximate reachable leg positions for every leg position in the
+LegPositions object.
+
+#### func (LegPositions) IsValid
+
+```go
+func (a LegPositions) IsValid() bool
+```
+IsValid returns if all of the leg positions can be reached.
+
+#### func (LegPositions) SetLegPosition
+
+```go
+func (a LegPositions) SetLegPosition(legNumber int, legPostion *LegPosition) error
+```
+SetLegPosition set legPosition with legNumber.
 
 #### type RotationDirection
 

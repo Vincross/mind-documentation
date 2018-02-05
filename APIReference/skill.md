@@ -11,42 +11,6 @@ This function must be implemented in your skill package:
 
 ## Usage
 
-#### func  OnClose
-
-```go
-func OnClose()
-```
-
-#### func  OnConnect
-
-```go
-func OnConnect()
-```
-
-#### func  OnDisconnect
-
-```go
-func OnDisconnect()
-```
-
-#### func  OnRecvJSON
-
-```go
-func OnRecvJSON(data []byte)
-```
-
-#### func  OnRecvString
-
-```go
-func OnRecvString(data string)
-```
-
-#### func  OnStart
-
-```go
-func OnStart()
-```
-
 #### func  SkillDataPath
 
 ```go
@@ -61,6 +25,42 @@ type Base struct{}
 ```
 
 struct Base implements the base Skill interface
+
+#### func (*Base) OnClose
+
+```go
+func (b *Base) OnClose()
+```
+
+#### func (*Base) OnConnect
+
+```go
+func (b *Base) OnConnect()
+```
+
+#### func (*Base) OnDisconnect
+
+```go
+func (b *Base) OnDisconnect()
+```
+
+#### func (*Base) OnRecvJSON
+
+```go
+func (b *Base) OnRecvJSON(data []byte)
+```
+
+#### func (*Base) OnRecvString
+
+```go
+func (b *Base) OnRecvString(data string)
+```
+
+#### func (*Base) OnStart
+
+```go
+func (b *Base) OnStart()
+```
 
 #### type Interface
 

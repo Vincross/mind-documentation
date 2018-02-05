@@ -26,9 +26,3 @@ var (
 	Debug *log.Logger
 )
 ```
-
-#### func  SendLog
-
-```go
-func SendLog(msg []byte, level loggers.Level) error
-```
