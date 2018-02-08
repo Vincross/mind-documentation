@@ -20,14 +20,22 @@ https://documentation.vincross.com/Introduction/hardware.html
 
 ```go
 var (
-	OverflowSoftLimit       error = errors.New("Calculate overflow soft limit")
-	OverflowHardLimit       error = errors.New("Calculate overflow hard limit")
-	YIsZeroOrNegative       error = errors.New("Y is zero or negative")
-	JointNumberNotSupport   error = errors.New("The joint number is not support")
-	WrongGaitType           error = errors.New("Wrong gait type.")
+	// OverflowSoftLimit error is deprecated.
+	OverflowSoftLimit error = errors.New("Calculate overflow soft limit")
+	// OverflowHardLimit error happens when 'CalculateJointDegrees' was called to calculate the joints' degrees with coodinates which represent an unreachable position.
+	OverflowHardLimit error = errors.New("Calculate overflow hard limit")
+	// YIsZeroOrNegative error is deprecated.
+	YIsZeroOrNegative error = errors.New("Y is zero or negative")
+	// JointNumberNotSupport error happens when 'CalculateJointDegrees' or 'Fit' are called with the count of joints of the legposion is not 3.
+	JointNumberNotSupport error = errors.New("The joint number is not support")
+	// WrongGaitType error happens when a wrong gait type was selected with 'SelectGait' function. You can make a reference with the GaitType consts.
+	WrongGaitType error = errors.New("Wrong gait type.")
+	// OverflowStepLengthRatio error happens when 'SetStepLength' was called to set the step length when walking. It should be 0-1.
 	OverflowStepLengthRatio error = errors.New("The step length ratio should be (0, 1].")
-	LegPositionInvalid      error = errors.New("The leg postion is invalid.")
-	SelectGaitWhileWalking  error = errors.New("Cound not select gait while the hexa is walking.")
+	// LegPositionInvalid error happens when 'Coordinates' was called to return an invalid coordinate.
+	LegPositionInvalid error = errors.New("The leg postion is invalid.")
+	// SelectGaitWhileWalking error happens when changing gait type with walking at the same time.
+	SelectGaitWhileWalking error = errors.New("Cound not select gait while the hexa is walking.")
 )
 ```
 
@@ -56,11 +64,6 @@ var LegLength = []float64{59, 47, 88}
 ```
 LegLength is the length of each leg.
 
-```go
-var WorkspaceRadius = CalculateDistance(LegLength...)
-```
-WorkspaceRadius is the farthest point from the thigh root that hexa can reach.
-
 #### func  Available
 
 ```go
@@ -80,13 +83,18 @@ Close shuts down the hexabody driver.
 ```go
 func Direction() (currDir float64)
 ```
-Direction returns the current direction in degrees (0-359).
+Direction returns the current direction of HEXA's head in degrees (0-359).
+
+0 degrees is in the direction of the power button. The result is the degree
+between the head and the power button in an anti-clockwise rotation.
 
 #### func  Lift
 
 ```go
 func Lift(lift float64) (err error)
 ```
+Lift raises or reduces the height of HEXA's body in given height (-20 mm - 50
+mm).
 
 #### func  MoveHead
 
@@ -117,6 +125,11 @@ Example: Control the robot's head move around.
 func MoveJoint(legNumber, jointNumber int, degree float64, duration int) error
 ```
 MoveJoint rotates specified joint on a leg to a given degree in given duration.
+The range of degree is different. The range of NO.0 joint's degree is (35 -
+145). The range of NO.1 joint's degree is (10 - 170). The range of NO.2 joint's
+degree is (10 - 160).
+
+'ErrLegNumberOverstep' error will be returned if jointNumber is not 0-2.
 
 #### func  MoveLeg
 
@@ -138,7 +151,8 @@ duration.
 ```go
 func Pitch(degree float64, duration int) error
 ```
-Pitch makes the body pitch at specified degree of angle in given duration.
+Pitch makes the body pitch at specified degree of angle in given duration. The
+HEXA will pitch along the X axis of body coordinate.
 
 #### func  Relax
 
@@ -184,6 +198,9 @@ func SelectGait(gaitType GaitType) error
 ```
 SelectGait chooses the walking gait of HEXA.
 
+'SelectGaitWhileWalking' error will be returned if the HEXA is walking.
+'WrongGaitType' error will be returned if a wrong gait type is input.
+
 #### func  SetStepLength
 
 ```go
@@ -191,6 +208,9 @@ func SetStepLength(stepLengthRatio float64) error
 ```
 SetStepLength set the walking step length of HEXA. The range of stepLengthRatio
 is (0, 1].
+
+'OverflowStepLengthRatio' error will be returned if stepLengthRatio is out of
+its range.
 
 #### func  Spin
 
@@ -226,6 +246,9 @@ Start starts the hexabody driver.
 ```go
 func StartMarching() (err error)
 ```
+Marching is a kind of state of the walk. The leg of HEXA will be raised higher
+when it's walking. It's different from the gait of the walk. StartMarching makes
+the HEXA enter the state of marching.
 
 #### func  StopLeg
 
@@ -246,6 +269,7 @@ StopLegs stops movement in all legs.
 ```go
 func StopMarching() (err error)
 ```
+StopMarching makes the HEXA quit the state of marching.
 
 #### func  StopPitch
 
@@ -461,7 +485,12 @@ is -135mm-135mm.
 ```go
 func (legPosition *LegPosition) CalculateJointDegrees() error
 ```
-CalculateJointDegrees calculates joints degree in single leg.
+CalculateJointDegrees calculates joints degree in single leg. It will convert
+the coordinate data of the leg to joints' degree.
+
+'JointNumberNotSupport' error will be returned if the count of joint are not 3.
+'OverflowHardLimit' error will be returned if the coordinate represent an
+unreachable place.
 
 #### func (*LegPosition) Coordinates
 
@@ -470,12 +499,19 @@ func (legPosition *LegPosition) Coordinates() (x, y, z float64, err error)
 ```
 Coordinates returns the legPosition's coordinates.
 
+'LegPositionInvalid' error will be returned if legPosition's coordinate is not
+valid.
+
 #### func (*LegPosition) Fit
 
 ```go
 func (legPosition *LegPosition) Fit() error
 ```
 Fit is used to approximate a reachable leg position for the LegPosition object.
+
+'JointNumberNotSupport' error will be returned if the count of joint are not 3.
+'OverflowHardLimit' error will be returned if the coordinate represent an
+unreachable place.
 
 #### func (*LegPosition) IsValid
 
