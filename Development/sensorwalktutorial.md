@@ -165,7 +165,7 @@ import (
 
 func (d *SensorWalkSkill) OnConnect() {
   hexabody.MoveHead(0, 0)
-  hexabody.WalkContinuously(0, WALK_SPEED)
+  hexabody.WalkContinuously(0, 0.5)
   for {
     dist, _ := distance.Value()
     log.Info.Println("Distance in millimeters: ", dist)
@@ -197,6 +197,7 @@ import (
   "mind/core/framework/log"
   "mind/core/framework/skill"
   "time"
+  "math"
 )
 
 ...
